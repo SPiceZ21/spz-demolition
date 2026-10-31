@@ -3,7 +3,7 @@ game 'gta5'
 
 name 'spz-demolition'
 description 'SPiceZ Minigame — Demolition. Destruction derby in the iak_demolition bowl: real damage, last car running wins.'
-version '1.0.1'
+version '1.0.2'
 author 'SPiceZ-Core'
 lua54 'yes'
 
