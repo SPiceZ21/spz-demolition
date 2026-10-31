@@ -351,12 +351,13 @@ end
 RegisterCommand(Config.MenuCommand, function() openLobbyMenu() end, false)
 
 RegisterNetEvent(E("invited"), function(d)
-    -- Racing / queued / in another minigame: a dialog would grab mouse focus
+    -- Racing / in another minigame (queued players are free roaming, so they get
+    -- the dialog; joining drops their queue spot): a dialog would grab mouse focus
     -- and lock the car mid-race. Just tell them; the invite is kept, so the
     -- room shows as invited in the hub once they are free.
     do
         local st = LocalPlayer.state
-        if st.inRace or st.inQueue or st.inMinigame or st.inTimeTrial then
+        if st.inRace or st.inMinigame or st.inTimeTrial then
             lib.notify({ title = Config.Title .. " invite",
                 description = ("%s invited you to %s — open the minigames hub when you're free."):format(d.fromName or "Someone", d.roomName or "their room"),
                 type = "inform", duration = 7000 })
