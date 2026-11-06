@@ -161,7 +161,7 @@ function Base.endRound(r, reason)
 
     pcall(function()
         local who = (#survivors == 1) and survivors[1].name or (#survivors .. " survivors")
-        exports["spz-log"]:Log("minigame", Config.Title, ("%s — %s (%s)"):format(who, reason, r.room.name), "success")
+        exports["spz-discord"]:Log("minigame", Config.Title, ("%s — %s (%s)"):format(who, reason, r.room.name), "success")
     end)
     log(("room %d round over: %s (%d survivor(s))"):format(r.room.id, reason, #survivors))
     SetTimeout(4000, function()
