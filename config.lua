@@ -43,7 +43,7 @@ Config.WreckBody   = 0.0
 
 -- ── Cars ────────────────────────────────────────────────────────────────────
 -- Heavy, cheap, body-on-frame: they take a beating and look the part.
-Config.VehicleDamage = true    -- real damage (spz-vehfunc godmode stands down)
+Config.VehicleDamage = true    -- real damage (spz-vehicles godmode stands down)
 Config.Cars = {
     "emperor2", "tornado3", "voodoo2", "glendale", "regina", "stanier",
     "dukes", "sabregt", "rancherxl", "picador", "bodhi2", "ingot",
