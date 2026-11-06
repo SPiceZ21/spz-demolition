@@ -35,7 +35,7 @@ local function notify(src, msg, t) TriggerClientEvent(E("notify"), src, msg, t o
 Base.notify = notify
 
 local function pidOf(src)
-    local ok, p = pcall(function() return exports["spz-identity"]:GetProfile(src) end)
+    local ok, p = pcall(function() return exports["spz-core"]:GetProfile(src) end)
     return ok and p and p.id or nil, ok and p or nil
 end
 
