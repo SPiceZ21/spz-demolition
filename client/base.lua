@@ -33,8 +33,8 @@ local HUD = exports["spz-minigames"]
 Base.HUD = HUD
 
 local function playClip(name)
-    if GetResourceState("spz-raceUI") == "started" then
-        if pcall(function() exports["spz-raceUI"]:PlaySound(name, 1.0) end) then return end
+    if GetResourceState("spz-races") == "started" then
+        if pcall(function() exports["spz-races"]:PlaySound(name, 1.0) end) then return end
     end
     PlaySoundFrontend(-1, name == "go" and "GO" or "3_2_1", "HUD_MINI_GAME_SOUNDSET", true)
 end
